@@ -1,0 +1,657 @@
+/******************************************************************************
+ ** Logisim-evolution goes FPGA automatic generated Verilog code             **
+ ** https://github.com/logisim-evolution/                                    **
+ **                                                                          **
+ ** Component : add_find_bit_1                                               **
+ **                                                                          **
+ *****************************************************************************/
+
+module add_find_bit_1( number,
+                       s,
+                       shift,
+                       sticky );
+
+   /*******************************************************************************
+   ** The inputs are defined here                                                **
+   *******************************************************************************/
+   input [63:0] number;
+   input [5:0]  shift;
+
+   /*******************************************************************************
+   ** The outputs are defined here                                               **
+   *******************************************************************************/
+   output s;
+   output sticky;
+
+   /*******************************************************************************
+   ** The wires are defined here                                                 **
+   *******************************************************************************/
+   wire [5:0]  s_logisimBus10;
+   wire [5:0]  s_logisimBus11;
+   wire [5:0]  s_logisimBus12;
+   wire [5:0]  s_logisimBus13;
+   wire [5:0]  s_logisimBus14;
+   wire [5:0]  s_logisimBus15;
+   wire [5:0]  s_logisimBus16;
+   wire [5:0]  s_logisimBus17;
+   wire [5:0]  s_logisimBus18;
+   wire [5:0]  s_logisimBus19;
+   wire [5:0]  s_logisimBus2;
+   wire [5:0]  s_logisimBus20;
+   wire [5:0]  s_logisimBus21;
+   wire [5:0]  s_logisimBus22;
+   wire [5:0]  s_logisimBus23;
+   wire [5:0]  s_logisimBus24;
+   wire [5:0]  s_logisimBus34;
+   wire [5:0]  s_logisimBus35;
+   wire [5:0]  s_logisimBus36;
+   wire [5:0]  s_logisimBus37;
+   wire [5:0]  s_logisimBus38;
+   wire [5:0]  s_logisimBus39;
+   wire [5:0]  s_logisimBus45;
+   wire [5:0]  s_logisimBus49;
+   wire [5:0]  s_logisimBus5;
+   wire [5:0]  s_logisimBus50;
+   wire [5:0]  s_logisimBus51;
+   wire [5:0]  s_logisimBus52;
+   wire [5:0]  s_logisimBus53;
+   wire [5:0]  s_logisimBus54;
+   wire [5:0]  s_logisimBus6;
+   wire [5:0]  s_logisimBus60;
+   wire [5:0]  s_logisimBus61;
+   wire [5:0]  s_logisimBus62;
+   wire [5:0]  s_logisimBus63;
+   wire [5:0]  s_logisimBus64;
+   wire [5:0]  s_logisimBus65;
+   wire [5:0]  s_logisimBus66;
+   wire [5:0]  s_logisimBus67;
+   wire [5:0]  s_logisimBus68;
+   wire [5:0]  s_logisimBus69;
+   wire [5:0]  s_logisimBus7;
+   wire [5:0]  s_logisimBus70;
+   wire [5:0]  s_logisimBus71;
+   wire [5:0]  s_logisimBus72;
+   wire [5:0]  s_logisimBus73;
+   wire [5:0]  s_logisimBus74;
+   wire [5:0]  s_logisimBus75;
+   wire [5:0]  s_logisimBus76;
+   wire [5:0]  s_logisimBus77;
+   wire [5:0]  s_logisimBus78;
+   wire [63:0] s_logisimBus79;
+   wire [5:0]  s_logisimBus8;
+   wire [5:0]  s_logisimBus9;
+   wire        s_logisimNet0;
+   wire        s_logisimNet1;
+   wire        s_logisimNet25;
+   wire        s_logisimNet26;
+   wire        s_logisimNet27;
+   wire        s_logisimNet28;
+   wire        s_logisimNet29;
+   wire        s_logisimNet3;
+   wire        s_logisimNet30;
+   wire        s_logisimNet31;
+   wire        s_logisimNet32;
+   wire        s_logisimNet33;
+   wire        s_logisimNet4;
+   wire        s_logisimNet40;
+   wire        s_logisimNet41;
+   wire        s_logisimNet42;
+   wire        s_logisimNet43;
+   wire        s_logisimNet44;
+   wire        s_logisimNet46;
+   wire        s_logisimNet47;
+   wire        s_logisimNet48;
+   wire        s_logisimNet55;
+   wire        s_logisimNet56;
+   wire        s_logisimNet57;
+   wire        s_logisimNet58;
+   wire        s_logisimNet59;
+   wire        s_logisimNet80;
+
+   /*******************************************************************************
+   ** The module functionality is described here                                 **
+   *******************************************************************************/
+
+   /*******************************************************************************
+   ** Here all input connections are defined                                     **
+   *******************************************************************************/
+   assign s_logisimBus5[5:0]   = shift;
+   assign s_logisimBus79[63:0] = number;
+
+   /*******************************************************************************
+   ** Here all output connections are defined                                    **
+   *******************************************************************************/
+   assign s      = s_logisimNet40;
+   assign sticky = s_logisimNet31;
+
+   /*******************************************************************************
+   ** Here all in-lined components are defined                                   **
+   *******************************************************************************/
+
+   // Constant
+   assign  s_logisimBus45[5:0]  =  {2'b00, 4'h1};
+
+
+   // Constant
+   assign  s_logisimBus61[5:0]  =  {2'b00, 4'hB};
+
+
+   // Constant
+   assign  s_logisimBus77[5:0]  =  {2'b00, 4'hC};
+
+
+   // Constant
+   assign  s_logisimBus78[5:0]  =  {2'b00, 4'hD};
+
+
+   // Constant
+   assign  s_logisimBus60[5:0]  =  {2'b00, 4'hE};
+
+
+   // Constant
+   assign  s_logisimBus62[5:0]  =  {2'b00, 4'hF};
+
+
+   // Constant
+   assign  s_logisimBus63[5:0]  =  {2'b01, 4'h0};
+
+
+   // Constant
+   assign  s_logisimBus64[5:0]  =  {2'b01, 4'h1};
+
+
+   // Constant
+   assign  s_logisimBus65[5:0]  =  {2'b01, 4'h2};
+
+
+   // Constant
+   assign  s_logisimBus66[5:0]  =  {2'b01, 4'h3};
+
+
+   // Constant
+   assign  s_logisimBus67[5:0]  =  {2'b01, 4'h4};
+
+
+   // Constant
+   assign  s_logisimBus68[5:0]  =  {2'b01, 4'h5};
+
+
+   // Constant
+   assign  s_logisimBus69[5:0]  =  {2'b01, 4'h6};
+
+
+   // Constant
+   assign  s_logisimBus70[5:0]  =  {2'b01, 4'h7};
+
+
+   // Constant
+   assign  s_logisimBus71[5:0]  =  {2'b01, 4'h8};
+
+
+   // Constant
+   assign  s_logisimBus72[5:0]  =  {2'b01, 4'h9};
+
+
+   // Constant
+   assign  s_logisimBus34[5:0]  =  {2'b00, 4'h1};
+
+
+   // Constant
+   assign  s_logisimBus35[5:0]  =  {2'b00, 4'h2};
+
+
+   // Constant
+   assign  s_logisimBus36[5:0]  =  {2'b00, 4'h3};
+
+
+   // Constant
+   assign  s_logisimBus37[5:0]  =  {2'b00, 4'h4};
+
+
+   // Constant
+   assign  s_logisimBus38[5:0]  =  {2'b00, 4'h5};
+
+
+   // Constant
+   assign  s_logisimBus39[5:0]  =  {2'b00, 4'h6};
+
+
+   // Constant
+   assign  s_logisimBus75[5:0]  =  {2'b00, 4'h7};
+
+
+   // Constant
+   assign  s_logisimBus76[5:0]  =  {2'b00, 4'h8};
+
+
+   // Constant
+   assign  s_logisimBus73[5:0]  =  {2'b00, 4'h9};
+
+
+   // Constant
+   assign  s_logisimBus74[5:0]  =  {2'b00, 4'hA};
+
+
+   /*******************************************************************************
+   ** Here all normal components are defined                                     **
+   *******************************************************************************/
+   OR_GATE_25_INPUTS #(.BubblesMask({1'b0, 24'h000000}))
+      GATES_1 (.input1(s_logisimNet80),
+               .input10(s_logisimNet44),
+               .input11(s_logisimNet28),
+               .input12(s_logisimNet57),
+               .input13(s_logisimNet27),
+               .input14(s_logisimNet46),
+               .input15(s_logisimNet3),
+               .input16(s_logisimNet29),
+               .input17(s_logisimNet42),
+               .input18(s_logisimNet30),
+               .input19(s_logisimNet43),
+               .input2(s_logisimNet25),
+               .input20(s_logisimNet48),
+               .input21(s_logisimNet0),
+               .input22(s_logisimNet55),
+               .input23(s_logisimNet26),
+               .input24(s_logisimNet41),
+               .input25(s_logisimNet47),
+               .input3(s_logisimNet59),
+               .input4(s_logisimNet4),
+               .input5(s_logisimNet58),
+               .input6(s_logisimNet32),
+               .input7(s_logisimNet56),
+               .input8(s_logisimNet1),
+               .input9(s_logisimNet33),
+               .result(s_logisimNet40));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_2 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet31),
+                 .sel(s_logisimBus2[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_3 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet57),
+                 .sel(s_logisimBus13[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_4 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet27),
+                 .sel(s_logisimBus7[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_5 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet46),
+                 .sel(s_logisimBus14[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_6 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet3),
+                 .sel(s_logisimBus6[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_7 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet29),
+                 .sel(s_logisimBus15[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_8 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet42),
+                 .sel(s_logisimBus16[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_9 (.dataIn(s_logisimBus79[63:0]),
+                 .dataOut(s_logisimNet30),
+                 .sel(s_logisimBus17[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_10 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet43),
+                  .sel(s_logisimBus18[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_11 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet80),
+                  .sel(s_logisimBus49[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_12 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet48),
+                  .sel(s_logisimBus19[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_13 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet0),
+                  .sel(s_logisimBus20[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_14 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet55),
+                  .sel(s_logisimBus21[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_15 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet26),
+                  .sel(s_logisimBus22[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_16 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet41),
+                  .sel(s_logisimBus23[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_17 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet47),
+                  .sel(s_logisimBus24[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_18 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet25),
+                  .sel(s_logisimBus50[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_19 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet59),
+                  .sel(s_logisimBus51[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_20 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet4),
+                  .sel(s_logisimBus52[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_21 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet58),
+                  .sel(s_logisimBus53[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_22 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet32),
+                  .sel(s_logisimBus54[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_23 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet56),
+                  .sel(s_logisimBus9[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_24 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet1),
+                  .sel(s_logisimBus10[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_25 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet33),
+                  .sel(s_logisimBus8[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_26 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet44),
+                  .sel(s_logisimBus11[5:0]));
+
+   BitSelector #(.nrOfExtendedBits(65),
+                 .nrOfInputBits(64),
+                 .nrOfselBits(6))
+      PLEXERS_27 (.dataIn(s_logisimBus79[63:0]),
+                  .dataOut(s_logisimNet28),
+                  .sel(s_logisimBus12[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_28 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus5[5:0]),
+                .dataB(s_logisimBus45[5:0]),
+                .result(s_logisimBus2[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_29 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus61[5:0]),
+                .result(s_logisimBus12[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_30 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus77[5:0]),
+                .result(s_logisimBus13[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_31 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus78[5:0]),
+                .result(s_logisimBus7[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_32 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus60[5:0]),
+                .result(s_logisimBus14[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_33 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus62[5:0]),
+                .result(s_logisimBus6[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_34 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus63[5:0]),
+                .result(s_logisimBus15[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_35 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus64[5:0]),
+                .result(s_logisimBus16[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_36 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus65[5:0]),
+                .result(s_logisimBus17[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_37 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus66[5:0]),
+                .result(s_logisimBus18[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_38 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus67[5:0]),
+                .result(s_logisimBus19[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_39 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus68[5:0]),
+                .result(s_logisimBus20[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_40 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus69[5:0]),
+                .result(s_logisimBus21[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_41 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus70[5:0]),
+                .result(s_logisimBus22[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_42 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus71[5:0]),
+                .result(s_logisimBus23[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_43 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus34[5:0]),
+                .result(s_logisimBus49[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_44 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus72[5:0]),
+                .result(s_logisimBus24[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_45 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus35[5:0]),
+                .result(s_logisimBus50[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_46 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus36[5:0]),
+                .result(s_logisimBus51[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_47 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus37[5:0]),
+                .result(s_logisimBus52[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_48 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus38[5:0]),
+                .result(s_logisimBus53[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_49 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus39[5:0]),
+                .result(s_logisimBus54[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_50 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus75[5:0]),
+                .result(s_logisimBus9[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_51 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus76[5:0]),
+                .result(s_logisimBus10[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_52 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus73[5:0]),
+                .result(s_logisimBus8[5:0]));
+
+   Subtractor #(.extendedBits(7),
+                .nrOfBits(6))
+      ARITH_53 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus2[5:0]),
+                .dataB(s_logisimBus74[5:0]),
+                .result(s_logisimBus11[5:0]));
+
+
+endmodule

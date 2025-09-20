@@ -1,0 +1,407 @@
+/******************************************************************************
+ ** Logisim-evolution goes FPGA automatic generated Verilog code             **
+ ** https://github.com/logisim-evolution/                                    **
+ **                                                                          **
+ ** Component : ADDD                                                         **
+ **                                                                          **
+ *****************************************************************************/
+
+module ADDD( S,
+             a,
+             b,
+             res_high,
+             res_low );
+
+   /*******************************************************************************
+   ** The inputs are defined here                                                **
+   *******************************************************************************/
+   input        S;
+   input [31:0] a;
+   input [31:0] b;
+
+   /*******************************************************************************
+   ** The outputs are defined here                                               **
+   *******************************************************************************/
+   output [31:0] res_high;
+   output [31:0] res_low;
+
+   /*******************************************************************************
+   ** The wires are defined here                                                 **
+   *******************************************************************************/
+   wire [31:0] s_logisimBus1;
+   wire [31:0] s_logisimBus24;
+   wire [31:0] s_logisimBus27;
+   wire [31:0] s_logisimBus31;
+   wire [3:0]  s_logisimBus33;
+   wire [3:0]  s_logisimBus40;
+   wire [3:0]  s_logisimBus41;
+   wire [31:0] s_logisimBus46;
+   wire [31:0] s_logisimBus56;
+   wire [63:0] s_logisimBus58;
+   wire [31:0] s_logisimBus59;
+   wire [3:0]  s_logisimBus62;
+   wire [3:0]  s_logisimBus63;
+   wire [31:0] s_logisimBus64;
+   wire [31:0] s_logisimBus66;
+   wire [3:0]  s_logisimBus71;
+   wire [3:0]  s_logisimBus72;
+   wire [3:0]  s_logisimBus73;
+   wire [3:0]  s_logisimBus74;
+   wire [3:0]  s_logisimBus76;
+   wire [3:0]  s_logisimBus77;
+   wire [3:0]  s_logisimBus78;
+   wire [3:0]  s_logisimBus79;
+   wire [3:0]  s_logisimBus80;
+   wire [31:0] s_logisimBus81;
+   wire        s_logisimNet10;
+   wire        s_logisimNet11;
+   wire        s_logisimNet12;
+   wire        s_logisimNet13;
+   wire        s_logisimNet14;
+   wire        s_logisimNet15;
+   wire        s_logisimNet16;
+   wire        s_logisimNet19;
+   wire        s_logisimNet21;
+   wire        s_logisimNet22;
+   wire        s_logisimNet34;
+   wire        s_logisimNet35;
+   wire        s_logisimNet36;
+   wire        s_logisimNet38;
+   wire        s_logisimNet39;
+   wire        s_logisimNet4;
+   wire        s_logisimNet45;
+   wire        s_logisimNet48;
+   wire        s_logisimNet50;
+   wire        s_logisimNet51;
+   wire        s_logisimNet52;
+   wire        s_logisimNet54;
+   wire        s_logisimNet57;
+   wire        s_logisimNet60;
+   wire        s_logisimNet67;
+   wire        s_logisimNet68;
+   wire        s_logisimNet69;
+   wire        s_logisimNet7;
+   wire        s_logisimNet70;
+   wire        s_logisimNet75;
+   wire        s_logisimNet9;
+
+   /*******************************************************************************
+   ** The module functionality is described here                                 **
+   *******************************************************************************/
+
+   /*******************************************************************************
+   ** Here all input connections are defined                                     **
+   *******************************************************************************/
+   assign s_logisimBus1[31:0]  = a;
+   assign s_logisimBus24[31:0] = b;
+   assign s_logisimNet7        = S;
+
+   /*******************************************************************************
+   ** Here all output connections are defined                                    **
+   *******************************************************************************/
+   assign res_high = s_logisimBus58[63:32];
+   assign res_low  = s_logisimBus58[31:0];
+
+   /*******************************************************************************
+   ** Here all in-lined components are defined                                   **
+   *******************************************************************************/
+
+   // Constant
+   assign  s_logisimNet34  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet67  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet68  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet35  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet69  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet70  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet57  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimBus81[31:0]  =  32'hFFFFFFFF;
+
+
+   // Constant
+   assign  s_logisimBus31[31:0]  =  32'h00000000;
+
+
+   // Constant
+   assign  s_logisimBus46[31:0]  =  32'h00000000;
+
+
+   // Constant
+   assign  s_logisimBus66[31:0]  =  32'h00000001;
+
+
+   // NOT Gate
+   assign s_logisimBus64 = ~s_logisimBus24;
+
+   /*******************************************************************************
+   ** Here all normal components are defined                                     **
+   *******************************************************************************/
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_1 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus24[31:0]),
+                 .muxIn_1(s_logisimBus64[31:0]),
+                 .muxOut(s_logisimBus27[31:0]),
+                 .sel(s_logisimNet7));
+
+   Multiplexer_bus_2 #(.nrOfBits(4))
+      PLEXERS_2 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus40[3:0]),
+                 .muxIn_1(s_logisimBus62[3:0]),
+                 .muxOut(s_logisimBus58[31:28]),
+                 .sel(s_logisimNet4));
+
+   Multiplexer_2   PLEXERS_3 (.enable(1'b1),
+                              .muxIn_0(s_logisimNet38),
+                              .muxIn_1(s_logisimNet21),
+                              .muxOut(s_logisimNet19),
+                              .sel(s_logisimNet4));
+
+   Multiplexer_bus_2 #(.nrOfBits(4))
+      PLEXERS_4 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus74[3:0]),
+                 .muxIn_1(s_logisimBus77[3:0]),
+                 .muxOut(s_logisimBus58[23:20]),
+                 .sel(s_logisimNet16));
+
+   Multiplexer_2   PLEXERS_5 (.enable(1'b1),
+                              .muxIn_0(s_logisimNet50),
+                              .muxIn_1(s_logisimNet9),
+                              .muxOut(s_logisimNet13),
+                              .sel(s_logisimNet16));
+
+   Multiplexer_bus_2 #(.nrOfBits(4))
+      PLEXERS_6 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus71[3:0]),
+                 .muxIn_1(s_logisimBus78[3:0]),
+                 .muxOut(s_logisimBus58[27:24]),
+                 .sel(s_logisimNet13));
+
+   Multiplexer_2   PLEXERS_7 (.enable(1'b1),
+                              .muxIn_0(s_logisimNet51),
+                              .muxIn_1(s_logisimNet10),
+                              .muxOut(s_logisimNet4),
+                              .sel(s_logisimNet13));
+
+   Multiplexer_bus_2 #(.nrOfBits(4))
+      PLEXERS_8 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus33[3:0]),
+                 .muxIn_1(s_logisimBus76[3:0]),
+                 .muxOut(s_logisimBus58[7:4]),
+                 .sel(s_logisimNet36));
+
+   Multiplexer_2   PLEXERS_9 (.enable(1'b1),
+                              .muxIn_0(s_logisimNet75),
+                              .muxIn_1(s_logisimNet54),
+                              .muxOut(s_logisimNet60),
+                              .sel(s_logisimNet36));
+
+   Multiplexer_bus_2 #(.nrOfBits(4))
+      PLEXERS_10 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus41[3:0]),
+                  .muxIn_1(s_logisimBus63[3:0]),
+                  .muxOut(s_logisimBus58[11:8]),
+                  .sel(s_logisimNet60));
+
+   Multiplexer_2   PLEXERS_11 (.enable(1'b1),
+                               .muxIn_0(s_logisimNet39),
+                               .muxIn_1(s_logisimNet22),
+                               .muxOut(s_logisimNet14),
+                               .sel(s_logisimNet60));
+
+   Multiplexer_bus_2 #(.nrOfBits(4))
+      PLEXERS_12 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus72[3:0]),
+                  .muxIn_1(s_logisimBus79[3:0]),
+                  .muxOut(s_logisimBus58[15:12]),
+                  .sel(s_logisimNet14));
+
+   Multiplexer_2   PLEXERS_13 (.enable(1'b1),
+                               .muxIn_0(s_logisimNet48),
+                               .muxIn_1(s_logisimNet11),
+                               .muxOut(s_logisimNet15),
+                               .sel(s_logisimNet14));
+
+   Multiplexer_bus_2 #(.nrOfBits(4))
+      PLEXERS_14 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus73[3:0]),
+                  .muxIn_1(s_logisimBus80[3:0]),
+                  .muxOut(s_logisimBus58[19:16]),
+                  .sel(s_logisimNet15));
+
+   Multiplexer_2   PLEXERS_15 (.enable(1'b1),
+                               .muxIn_0(s_logisimNet52),
+                               .muxIn_1(s_logisimNet12),
+                               .muxOut(s_logisimNet16),
+                               .sel(s_logisimNet15));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_16 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus81[31:0]),
+                  .muxIn_1(s_logisimBus31[31:0]),
+                  .muxOut(s_logisimBus56[31:0]),
+                  .sel(s_logisimNet45));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_17 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus46[31:0]),
+                  .muxIn_1(s_logisimBus66[31:0]),
+                  .muxOut(s_logisimBus59[31:0]),
+                  .sel(s_logisimNet19));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_18 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus59[31:0]),
+                  .muxIn_1(s_logisimBus56[31:0]),
+                  .muxOut(s_logisimBus58[63:32]),
+                  .sel(s_logisimNet7));
+
+   Comparator #(.nrOfBits(32),
+                .twosComplement(0))
+      ARITH_19 (.aEqualsB(),
+                .aGreaterThanB(s_logisimNet45),
+                .aLessThanB(),
+                .dataA(s_logisimBus1[31:0]),
+                .dataB(s_logisimBus24[31:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_20 (.carryIn(1'b0),
+                .carryOut(s_logisimNet38),
+                .dataA(s_logisimBus1[31:28]),
+                .dataB(s_logisimBus27[31:28]),
+                .result(s_logisimBus40[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_21 (.carryIn(s_logisimNet34),
+                .carryOut(s_logisimNet21),
+                .dataA(s_logisimBus1[31:28]),
+                .dataB(s_logisimBus27[31:28]),
+                .result(s_logisimBus62[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_22 (.carryIn(s_logisimNet67),
+                .carryOut(s_logisimNet9),
+                .dataA(s_logisimBus1[23:20]),
+                .dataB(s_logisimBus27[23:20]),
+                .result(s_logisimBus77[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_23 (.carryIn(1'b0),
+                .carryOut(s_logisimNet51),
+                .dataA(s_logisimBus1[27:24]),
+                .dataB(s_logisimBus27[27:24]),
+                .result(s_logisimBus71[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_24 (.carryIn(s_logisimNet68),
+                .carryOut(s_logisimNet10),
+                .dataA(s_logisimBus1[27:24]),
+                .dataB(s_logisimBus27[27:24]),
+                .result(s_logisimBus78[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_25 (.carryIn(1'b0),
+                .carryOut(s_logisimNet75),
+                .dataA(s_logisimBus1[7:4]),
+                .dataB(s_logisimBus27[7:4]),
+                .result(s_logisimBus33[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_26 (.carryIn(s_logisimNet57),
+                .carryOut(s_logisimNet54),
+                .dataA(s_logisimBus1[7:4]),
+                .dataB(s_logisimBus27[7:4]),
+                .result(s_logisimBus76[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_27 (.carryIn(1'b0),
+                .carryOut(s_logisimNet39),
+                .dataA(s_logisimBus1[11:8]),
+                .dataB(s_logisimBus27[11:8]),
+                .result(s_logisimBus41[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_28 (.carryIn(s_logisimNet35),
+                .carryOut(s_logisimNet22),
+                .dataA(s_logisimBus1[11:8]),
+                .dataB(s_logisimBus27[11:8]),
+                .result(s_logisimBus63[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_29 (.carryIn(1'b0),
+                .carryOut(s_logisimNet48),
+                .dataA(s_logisimBus1[15:12]),
+                .dataB(s_logisimBus27[15:12]),
+                .result(s_logisimBus72[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_30 (.carryIn(s_logisimNet69),
+                .carryOut(s_logisimNet11),
+                .dataA(s_logisimBus1[15:12]),
+                .dataB(s_logisimBus27[15:12]),
+                .result(s_logisimBus79[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_31 (.carryIn(1'b0),
+                .carryOut(s_logisimNet52),
+                .dataA(s_logisimBus1[19:16]),
+                .dataB(s_logisimBus27[19:16]),
+                .result(s_logisimBus73[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_32 (.carryIn(s_logisimNet70),
+                .carryOut(s_logisimNet12),
+                .dataA(s_logisimBus1[19:16]),
+                .dataB(s_logisimBus27[19:16]),
+                .result(s_logisimBus80[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_33 (.carryIn(1'b0),
+                .carryOut(s_logisimNet50),
+                .dataA(s_logisimBus1[23:20]),
+                .dataB(s_logisimBus27[23:20]),
+                .result(s_logisimBus74[3:0]));
+
+   Adder #(.extendedBits(5),
+           .nrOfBits(4))
+      ARITH_34 (.carryIn(s_logisimNet7),
+                .carryOut(s_logisimNet36),
+                .dataA(s_logisimBus1[3:0]),
+                .dataB(s_logisimBus27[3:0]),
+                .result(s_logisimBus58[3:0]));
+
+
+endmodule

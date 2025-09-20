@@ -1,0 +1,481 @@
+/******************************************************************************
+ ** Logisim-evolution goes FPGA automatic generated Verilog code             **
+ ** https://github.com/logisim-evolution/                                    **
+ **                                                                          **
+ ** Component : DIV                                                          **
+ **                                                                          **
+ *****************************************************************************/
+
+module DIV( clk,
+            dividend,
+            divisor,
+            done,
+            quotient,
+            remainder );
+
+   /*******************************************************************************
+   ** The inputs are defined here                                                **
+   *******************************************************************************/
+   input        clk;
+   input [31:0] dividend;
+   input [31:0] divisor;
+
+   /*******************************************************************************
+   ** The outputs are defined here                                               **
+   *******************************************************************************/
+   output        done;
+   output [31:0] quotient;
+   output [31:0] remainder;
+
+   /*******************************************************************************
+   ** The wires are defined here                                                 **
+   *******************************************************************************/
+   wire [31:0] s_logisimBus0;
+   wire [31:0] s_logisimBus1;
+   wire [31:0] s_logisimBus10;
+   wire [31:0] s_logisimBus11;
+   wire [31:0] s_logisimBus12;
+   wire [6:0]  s_logisimBus14;
+   wire [31:0] s_logisimBus17;
+   wire [31:0] s_logisimBus20;
+   wire [31:0] s_logisimBus23;
+   wire [6:0]  s_logisimBus24;
+   wire [31:0] s_logisimBus25;
+   wire [31:0] s_logisimBus3;
+   wire [31:0] s_logisimBus31;
+   wire [31:0] s_logisimBus34;
+   wire [30:0] s_logisimBus35;
+   wire [31:0] s_logisimBus37;
+   wire [31:0] s_logisimBus38;
+   wire [6:0]  s_logisimBus40;
+   wire [31:0] s_logisimBus41;
+   wire [31:0] s_logisimBus42;
+   wire [31:0] s_logisimBus45;
+   wire [31:0] s_logisimBus46;
+   wire [30:0] s_logisimBus47;
+   wire [31:0] s_logisimBus5;
+   wire        s_logisimNet13;
+   wire        s_logisimNet15;
+   wire        s_logisimNet16;
+   wire        s_logisimNet18;
+   wire        s_logisimNet19;
+   wire        s_logisimNet2;
+   wire        s_logisimNet21;
+   wire        s_logisimNet22;
+   wire        s_logisimNet26;
+   wire        s_logisimNet27;
+   wire        s_logisimNet28;
+   wire        s_logisimNet29;
+   wire        s_logisimNet30;
+   wire        s_logisimNet32;
+   wire        s_logisimNet33;
+   wire        s_logisimNet36;
+   wire        s_logisimNet39;
+   wire        s_logisimNet4;
+   wire        s_logisimNet43;
+   wire        s_logisimNet44;
+   wire        s_logisimNet48;
+   wire        s_logisimNet49;
+   wire        s_logisimNet50;
+   wire        s_logisimNet51;
+   wire        s_logisimNet52;
+   wire        s_logisimNet53;
+   wire        s_logisimNet6;
+   wire        s_logisimNet7;
+   wire        s_logisimNet8;
+   wire        s_logisimNet9;
+
+   /*******************************************************************************
+   ** The module functionality is described here                                 **
+   *******************************************************************************/
+
+   /*******************************************************************************
+   ** Here all wiring is defined                                                 **
+   *******************************************************************************/
+   assign s_logisimBus10[10] = s_logisimBus35[9];
+   assign s_logisimBus10[11] = s_logisimBus35[10];
+   assign s_logisimBus10[12] = s_logisimBus35[11];
+   assign s_logisimBus10[13] = s_logisimBus35[12];
+   assign s_logisimBus10[14] = s_logisimBus35[13];
+   assign s_logisimBus10[15] = s_logisimBus35[14];
+   assign s_logisimBus10[16] = s_logisimBus35[15];
+   assign s_logisimBus10[17] = s_logisimBus35[16];
+   assign s_logisimBus10[18] = s_logisimBus35[17];
+   assign s_logisimBus10[19] = s_logisimBus35[18];
+   assign s_logisimBus10[1]  = s_logisimBus35[0];
+   assign s_logisimBus10[20] = s_logisimBus35[19];
+   assign s_logisimBus10[21] = s_logisimBus35[20];
+   assign s_logisimBus10[22] = s_logisimBus35[21];
+   assign s_logisimBus10[23] = s_logisimBus35[22];
+   assign s_logisimBus10[24] = s_logisimBus35[23];
+   assign s_logisimBus10[25] = s_logisimBus35[24];
+   assign s_logisimBus10[26] = s_logisimBus35[25];
+   assign s_logisimBus10[27] = s_logisimBus35[26];
+   assign s_logisimBus10[28] = s_logisimBus35[27];
+   assign s_logisimBus10[29] = s_logisimBus35[28];
+   assign s_logisimBus10[2]  = s_logisimBus35[1];
+   assign s_logisimBus10[30] = s_logisimBus35[29];
+   assign s_logisimBus10[31] = s_logisimBus35[30];
+   assign s_logisimBus10[3]  = s_logisimBus35[2];
+   assign s_logisimBus10[4]  = s_logisimBus35[3];
+   assign s_logisimBus10[5]  = s_logisimBus35[4];
+   assign s_logisimBus10[6]  = s_logisimBus35[5];
+   assign s_logisimBus10[7]  = s_logisimBus35[6];
+   assign s_logisimBus10[8]  = s_logisimBus35[7];
+   assign s_logisimBus10[9]  = s_logisimBus35[8];
+   assign s_logisimBus1[0]   = s_logisimNet8;
+   assign s_logisimBus1[10]  = s_logisimBus47[9];
+   assign s_logisimBus1[11]  = s_logisimBus47[10];
+   assign s_logisimBus1[12]  = s_logisimBus47[11];
+   assign s_logisimBus1[13]  = s_logisimBus47[12];
+   assign s_logisimBus1[14]  = s_logisimBus47[13];
+   assign s_logisimBus1[15]  = s_logisimBus47[14];
+   assign s_logisimBus1[16]  = s_logisimBus47[15];
+   assign s_logisimBus1[17]  = s_logisimBus47[16];
+   assign s_logisimBus1[18]  = s_logisimBus47[17];
+   assign s_logisimBus1[19]  = s_logisimBus47[18];
+   assign s_logisimBus1[1]   = s_logisimBus47[0];
+   assign s_logisimBus1[20]  = s_logisimBus47[19];
+   assign s_logisimBus1[21]  = s_logisimBus47[20];
+   assign s_logisimBus1[22]  = s_logisimBus47[21];
+   assign s_logisimBus1[23]  = s_logisimBus47[22];
+   assign s_logisimBus1[24]  = s_logisimBus47[23];
+   assign s_logisimBus1[25]  = s_logisimBus47[24];
+   assign s_logisimBus1[26]  = s_logisimBus47[25];
+   assign s_logisimBus1[27]  = s_logisimBus47[26];
+   assign s_logisimBus1[28]  = s_logisimBus47[27];
+   assign s_logisimBus1[29]  = s_logisimBus47[28];
+   assign s_logisimBus1[2]   = s_logisimBus47[1];
+   assign s_logisimBus1[30]  = s_logisimBus47[29];
+   assign s_logisimBus1[31]  = s_logisimBus47[30];
+   assign s_logisimBus1[3]   = s_logisimBus47[2];
+   assign s_logisimBus1[4]   = s_logisimBus47[3];
+   assign s_logisimBus1[5]   = s_logisimBus47[4];
+   assign s_logisimBus1[6]   = s_logisimBus47[5];
+   assign s_logisimBus1[7]   = s_logisimBus47[6];
+   assign s_logisimBus1[8]   = s_logisimBus47[7];
+   assign s_logisimBus1[9]   = s_logisimBus47[8];
+   assign s_logisimBus35[0]  = s_logisimBus20[0];
+   assign s_logisimBus35[10] = s_logisimBus20[10];
+   assign s_logisimBus35[11] = s_logisimBus20[11];
+   assign s_logisimBus35[12] = s_logisimBus20[12];
+   assign s_logisimBus35[13] = s_logisimBus20[13];
+   assign s_logisimBus35[14] = s_logisimBus20[14];
+   assign s_logisimBus35[15] = s_logisimBus20[15];
+   assign s_logisimBus35[16] = s_logisimBus20[16];
+   assign s_logisimBus35[17] = s_logisimBus20[17];
+   assign s_logisimBus35[18] = s_logisimBus20[18];
+   assign s_logisimBus35[19] = s_logisimBus20[19];
+   assign s_logisimBus35[1]  = s_logisimBus20[1];
+   assign s_logisimBus35[20] = s_logisimBus20[20];
+   assign s_logisimBus35[21] = s_logisimBus20[21];
+   assign s_logisimBus35[22] = s_logisimBus20[22];
+   assign s_logisimBus35[23] = s_logisimBus20[23];
+   assign s_logisimBus35[24] = s_logisimBus20[24];
+   assign s_logisimBus35[25] = s_logisimBus20[25];
+   assign s_logisimBus35[26] = s_logisimBus20[26];
+   assign s_logisimBus35[27] = s_logisimBus20[27];
+   assign s_logisimBus35[28] = s_logisimBus20[28];
+   assign s_logisimBus35[29] = s_logisimBus20[29];
+   assign s_logisimBus35[2]  = s_logisimBus20[2];
+   assign s_logisimBus35[30] = s_logisimBus20[30];
+   assign s_logisimBus35[3]  = s_logisimBus20[3];
+   assign s_logisimBus35[4]  = s_logisimBus20[4];
+   assign s_logisimBus35[5]  = s_logisimBus20[5];
+   assign s_logisimBus35[6]  = s_logisimBus20[6];
+   assign s_logisimBus35[7]  = s_logisimBus20[7];
+   assign s_logisimBus35[8]  = s_logisimBus20[8];
+   assign s_logisimBus35[9]  = s_logisimBus20[9];
+   assign s_logisimBus47[0]  = s_logisimBus5[0];
+   assign s_logisimBus47[10] = s_logisimBus5[10];
+   assign s_logisimBus47[11] = s_logisimBus5[11];
+   assign s_logisimBus47[12] = s_logisimBus5[12];
+   assign s_logisimBus47[13] = s_logisimBus5[13];
+   assign s_logisimBus47[14] = s_logisimBus5[14];
+   assign s_logisimBus47[15] = s_logisimBus5[15];
+   assign s_logisimBus47[16] = s_logisimBus5[16];
+   assign s_logisimBus47[17] = s_logisimBus5[17];
+   assign s_logisimBus47[18] = s_logisimBus5[18];
+   assign s_logisimBus47[19] = s_logisimBus5[19];
+   assign s_logisimBus47[1]  = s_logisimBus5[1];
+   assign s_logisimBus47[20] = s_logisimBus5[20];
+   assign s_logisimBus47[21] = s_logisimBus5[21];
+   assign s_logisimBus47[22] = s_logisimBus5[22];
+   assign s_logisimBus47[23] = s_logisimBus5[23];
+   assign s_logisimBus47[24] = s_logisimBus5[24];
+   assign s_logisimBus47[25] = s_logisimBus5[25];
+   assign s_logisimBus47[26] = s_logisimBus5[26];
+   assign s_logisimBus47[27] = s_logisimBus5[27];
+   assign s_logisimBus47[28] = s_logisimBus5[28];
+   assign s_logisimBus47[29] = s_logisimBus5[29];
+   assign s_logisimBus47[2]  = s_logisimBus5[2];
+   assign s_logisimBus47[30] = s_logisimBus5[30];
+   assign s_logisimBus47[3]  = s_logisimBus5[3];
+   assign s_logisimBus47[4]  = s_logisimBus5[4];
+   assign s_logisimBus47[5]  = s_logisimBus5[5];
+   assign s_logisimBus47[6]  = s_logisimBus5[6];
+   assign s_logisimBus47[7]  = s_logisimBus5[7];
+   assign s_logisimBus47[8]  = s_logisimBus5[8];
+   assign s_logisimBus47[9]  = s_logisimBus5[9];
+   assign s_logisimNet8      = s_logisimBus20[31];
+
+   /*******************************************************************************
+   ** Here all input connections are defined                                     **
+   *******************************************************************************/
+   assign s_logisimBus11[31:0] = divisor;
+   assign s_logisimBus17[31:0] = dividend;
+   assign s_logisimNet15       = clk;
+
+   /*******************************************************************************
+   ** Here all output connections are defined                                    **
+   *******************************************************************************/
+   assign done      = s_logisimNet13;
+   assign quotient  = s_logisimBus20[31:0];
+   assign remainder = s_logisimBus5[31:0];
+
+   /*******************************************************************************
+   ** Here all in-lined components are defined                                   **
+   *******************************************************************************/
+
+   // Constant
+   assign  s_logisimNet2  =  1'b0;
+
+
+   // Constant
+   assign  s_logisimBus24[6:0]  =  {3'b100, 4'h0};
+
+
+   // Constant
+   assign  s_logisimBus37[31:0]  =  32'h00000001;
+
+
+   // Constant
+   assign  s_logisimBus34[31:0]  =  32'h00000000;
+
+
+   // Constant
+   assign  s_logisimBus40[6:0]  =  {3'b000, 4'h1};
+
+
+   // Constant
+   assign  s_logisimNet44  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet50  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet51  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimNet52  =  1'b1;
+
+
+   // Constant
+   assign  s_logisimBus10[0]  =  1'b0;
+
+
+   // NOT Gate
+   assign s_logisimNet7 = ~s_logisimNet6;
+
+   // NOT Gate
+   assign s_logisimNet39 = ~s_logisimNet13;
+
+   /*******************************************************************************
+   ** Here all normal components are defined                                     **
+   *******************************************************************************/
+   NAND_GATE #(.BubblesMask(2'b00))
+      GATES_1 (.input1(s_logisimNet16),
+               .input2(s_logisimNet21),
+               .result(s_logisimNet26));
+
+   OR_GATE_7_INPUTS #(.BubblesMask({3'b000, 4'h0}))
+      GATES_2 (.input1(s_logisimBus14[0]),
+               .input2(s_logisimBus14[1]),
+               .input3(s_logisimBus14[2]),
+               .input4(s_logisimBus14[3]),
+               .input5(s_logisimBus14[4]),
+               .input6(s_logisimBus14[5]),
+               .input7(s_logisimBus14[6]),
+               .result(s_logisimNet6));
+
+   OR_GATE_BUS #(.BubblesMask(2'b00),
+                 .NrOfBits(32))
+      GATES_3 (.input1(s_logisimBus20[31:0]),
+               .input2(s_logisimBus37[31:0]),
+               .result(s_logisimBus45[31:0]));
+
+   OR_GATE #(.BubblesMask(2'b00))
+      GATES_4 (.input1(s_logisimNet4),
+               .input2(s_logisimNet22),
+               .result(s_logisimNet27));
+
+   OR_GATE #(.BubblesMask(2'b00))
+      GATES_5 (.input1(s_logisimNet7),
+               .input2(s_logisimBus14[0]),
+               .result(s_logisimNet9));
+
+   AND_GATE #(.BubblesMask(2'b00))
+      GATES_6 (.input1(s_logisimNet15),
+               .input2(s_logisimNet39),
+               .result(s_logisimNet29));
+
+   OR_GATE #(.BubblesMask(2'b00))
+      GATES_7 (.input1(s_logisimNet13),
+               .input2(s_logisimNet30),
+               .result(s_logisimNet53));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_8 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus20[31:0]),
+                 .muxIn_1(s_logisimBus45[31:0]),
+                 .muxOut(s_logisimBus23[31:0]),
+                 .sel(s_logisimNet27));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_9 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus5[31:0]),
+                 .muxIn_1(s_logisimBus46[31:0]),
+                 .muxOut(s_logisimBus0[31:0]),
+                 .sel(s_logisimNet27));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_10 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus23[31:0]),
+                  .muxIn_1(s_logisimBus17[31:0]),
+                  .muxOut(s_logisimBus12[31:0]),
+                  .sel(s_logisimNet7));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_11 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus0[31:0]),
+                  .muxIn_1(s_logisimBus34[31:0]),
+                  .muxOut(s_logisimBus41[31:0]),
+                  .sel(s_logisimNet7));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_12 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus10[31:0]),
+                  .muxIn_1(s_logisimBus12[31:0]),
+                  .muxOut(s_logisimBus25[31:0]),
+                  .sel(s_logisimNet9));
+
+   Multiplexer_bus_2 #(.nrOfBits(32))
+      PLEXERS_13 (.enable(1'b1),
+                  .muxIn_0(s_logisimBus1[31:0]),
+                  .muxIn_1(s_logisimBus41[31:0]),
+                  .muxOut(s_logisimBus38[31:0]),
+                  .sel(s_logisimNet9));
+
+   Comparator #(.nrOfBits(32),
+                .twosComplement(1))
+      ARITH_14 (.aEqualsB(s_logisimNet21),
+                .aGreaterThanB(),
+                .aLessThanB(),
+                .dataA(s_logisimBus42[31:0]),
+                .dataB(s_logisimBus11[31:0]));
+
+   Comparator #(.nrOfBits(32),
+                .twosComplement(1))
+      ARITH_15 (.aEqualsB(s_logisimNet16),
+                .aGreaterThanB(),
+                .aLessThanB(),
+                .dataA(s_logisimBus31[31:0]),
+                .dataB(s_logisimBus17[31:0]));
+
+   Comparator #(.nrOfBits(32),
+                .twosComplement(0))
+      ARITH_16 (.aEqualsB(s_logisimNet22),
+                .aGreaterThanB(s_logisimNet4),
+                .aLessThanB(),
+                .dataA(s_logisimBus5[31:0]),
+                .dataB(s_logisimBus3[31:0]));
+
+   Subtractor #(.extendedBits(33),
+                .nrOfBits(32))
+      ARITH_17 (.borrowIn(1'b0),
+                .borrowOut(),
+                .dataA(s_logisimBus5[31:0]),
+                .dataB(s_logisimBus3[31:0]),
+                .result(s_logisimBus46[31:0]));
+
+   Comparator #(.nrOfBits(7),
+                .twosComplement(1))
+      ARITH_18 (.aEqualsB(s_logisimNet30),
+                .aGreaterThanB(),
+                .aLessThanB(),
+                .dataA(s_logisimBus14[6:0]),
+                .dataB(s_logisimBus40[6:0]));
+
+   REGISTER_FLIP_FLOP #(.invertClock(0),
+                        .nrOfBits(32))
+      b (.clock(s_logisimNet15),
+         .clockEnable(s_logisimNet26),
+         .d(s_logisimBus11[31:0]),
+         .q(s_logisimBus3[31:0]),
+         .reset(1'b0),
+         .tick(1'b1));
+
+   LogisimCounter #(.invertClock(0),
+                    .maxVal({3'b111, 4'hF}),
+                    .mode(0),
+                    .width(7))
+      MEMORY_20 (.clear(s_logisimNet26),
+                 .clock(s_logisimNet15),
+                 .compareOut(),
+                 .countValue(s_logisimBus14[6:0]),
+                 .enable(1'b1),
+                 .load(s_logisimNet7),
+                 .loadData(s_logisimBus24[6:0]),
+                 .tick(1'b1),
+                 .upNotDown(s_logisimNet2));
+
+   REGISTER_FLIP_FLOP #(.invertClock(0),
+                        .nrOfBits(32))
+      q (.clock(s_logisimNet29),
+         .clockEnable(s_logisimNet50),
+         .d(s_logisimBus25[31:0]),
+         .q(s_logisimBus20[31:0]),
+         .reset(1'b0),
+         .tick(1'b1));
+
+   REGISTER_FLIP_FLOP #(.invertClock(0),
+                        .nrOfBits(32))
+      a (.clock(s_logisimNet29),
+         .clockEnable(s_logisimNet44),
+         .d(s_logisimBus38[31:0]),
+         .q(s_logisimBus5[31:0]),
+         .reset(1'b0),
+         .tick(1'b1));
+
+   REGISTER_FLIP_FLOP #(.invertClock(0),
+                        .nrOfBits(32))
+      MEMORY_23 (.clock(s_logisimNet15),
+                 .clockEnable(s_logisimNet51),
+                 .d(s_logisimBus11[31:0]),
+                 .q(s_logisimBus42[31:0]),
+                 .reset(1'b0),
+                 .tick(1'b1));
+
+   REGISTER_FLIP_FLOP #(.invertClock(0),
+                        .nrOfBits(32))
+      MEMORY_24 (.clock(s_logisimNet15),
+                 .clockEnable(s_logisimNet52),
+                 .d(s_logisimBus17[31:0]),
+                 .q(s_logisimBus31[31:0]),
+                 .reset(1'b0),
+                 .tick(1'b1));
+
+   D_FLIPFLOP #(.invertClockEnable(0))
+      MEMORY_25 (.clock(s_logisimNet15),
+                 .d(s_logisimNet53),
+                 .preset(1'b0),
+                 .q(s_logisimNet13),
+                 .qBar(),
+                 .reset(s_logisimNet26),
+                 .tick(1'b1));
+
+
+endmodule

@@ -1,0 +1,141 @@
+/******************************************************************************
+ ** Logisim-evolution goes FPGA automatic generated Verilog code             **
+ ** https://github.com/logisim-evolution/                                    **
+ **                                                                          **
+ ** Component : fsub                                                         **
+ **                                                                          **
+ *****************************************************************************/
+
+module fsub( INFINITY_PIN,
+             NAN_PIN,
+             a,
+             b,
+             res );
+
+   /*******************************************************************************
+   ** The inputs are defined here                                                **
+   *******************************************************************************/
+   input [31:0] a;
+   input [31:0] b;
+
+   /*******************************************************************************
+   ** The outputs are defined here                                               **
+   *******************************************************************************/
+   output        INFINITY_PIN;
+   output        NAN_PIN;
+   output [31:0] res;
+
+   /*******************************************************************************
+   ** The wires are defined here                                                 **
+   *******************************************************************************/
+   wire [31:0] s_logisimBus2;
+   wire [31:0] s_logisimBus3;
+   wire [31:0] s_logisimBus4;
+   wire [31:0] s_logisimBus6;
+   wire [30:0] s_logisimBus8;
+   wire        s_logisimNet0;
+   wire        s_logisimNet1;
+   wire        s_logisimNet5;
+   wire        s_logisimNet7;
+
+   /*******************************************************************************
+   ** The module functionality is described here                                 **
+   *******************************************************************************/
+
+   /*******************************************************************************
+   ** Here all wiring is defined                                                 **
+   *******************************************************************************/
+   assign s_logisimBus3[0]  = s_logisimBus8[0];
+   assign s_logisimBus3[10] = s_logisimBus8[10];
+   assign s_logisimBus3[11] = s_logisimBus8[11];
+   assign s_logisimBus3[12] = s_logisimBus8[12];
+   assign s_logisimBus3[13] = s_logisimBus8[13];
+   assign s_logisimBus3[14] = s_logisimBus8[14];
+   assign s_logisimBus3[15] = s_logisimBus8[15];
+   assign s_logisimBus3[16] = s_logisimBus8[16];
+   assign s_logisimBus3[17] = s_logisimBus8[17];
+   assign s_logisimBus3[18] = s_logisimBus8[18];
+   assign s_logisimBus3[19] = s_logisimBus8[19];
+   assign s_logisimBus3[1]  = s_logisimBus8[1];
+   assign s_logisimBus3[20] = s_logisimBus8[20];
+   assign s_logisimBus3[21] = s_logisimBus8[21];
+   assign s_logisimBus3[22] = s_logisimBus8[22];
+   assign s_logisimBus3[23] = s_logisimBus8[23];
+   assign s_logisimBus3[24] = s_logisimBus8[24];
+   assign s_logisimBus3[25] = s_logisimBus8[25];
+   assign s_logisimBus3[26] = s_logisimBus8[26];
+   assign s_logisimBus3[27] = s_logisimBus8[27];
+   assign s_logisimBus3[28] = s_logisimBus8[28];
+   assign s_logisimBus3[29] = s_logisimBus8[29];
+   assign s_logisimBus3[2]  = s_logisimBus8[2];
+   assign s_logisimBus3[30] = s_logisimBus8[30];
+   assign s_logisimBus3[3]  = s_logisimBus8[3];
+   assign s_logisimBus3[4]  = s_logisimBus8[4];
+   assign s_logisimBus3[5]  = s_logisimBus8[5];
+   assign s_logisimBus3[6]  = s_logisimBus8[6];
+   assign s_logisimBus3[7]  = s_logisimBus8[7];
+   assign s_logisimBus3[8]  = s_logisimBus8[8];
+   assign s_logisimBus3[9]  = s_logisimBus8[9];
+   assign s_logisimBus8[0]  = s_logisimBus4[0];
+   assign s_logisimBus8[10] = s_logisimBus4[10];
+   assign s_logisimBus8[11] = s_logisimBus4[11];
+   assign s_logisimBus8[12] = s_logisimBus4[12];
+   assign s_logisimBus8[13] = s_logisimBus4[13];
+   assign s_logisimBus8[14] = s_logisimBus4[14];
+   assign s_logisimBus8[15] = s_logisimBus4[15];
+   assign s_logisimBus8[16] = s_logisimBus4[16];
+   assign s_logisimBus8[17] = s_logisimBus4[17];
+   assign s_logisimBus8[18] = s_logisimBus4[18];
+   assign s_logisimBus8[19] = s_logisimBus4[19];
+   assign s_logisimBus8[1]  = s_logisimBus4[1];
+   assign s_logisimBus8[20] = s_logisimBus4[20];
+   assign s_logisimBus8[21] = s_logisimBus4[21];
+   assign s_logisimBus8[22] = s_logisimBus4[22];
+   assign s_logisimBus8[23] = s_logisimBus4[23];
+   assign s_logisimBus8[24] = s_logisimBus4[24];
+   assign s_logisimBus8[25] = s_logisimBus4[25];
+   assign s_logisimBus8[26] = s_logisimBus4[26];
+   assign s_logisimBus8[27] = s_logisimBus4[27];
+   assign s_logisimBus8[28] = s_logisimBus4[28];
+   assign s_logisimBus8[29] = s_logisimBus4[29];
+   assign s_logisimBus8[2]  = s_logisimBus4[2];
+   assign s_logisimBus8[30] = s_logisimBus4[30];
+   assign s_logisimBus8[3]  = s_logisimBus4[3];
+   assign s_logisimBus8[4]  = s_logisimBus4[4];
+   assign s_logisimBus8[5]  = s_logisimBus4[5];
+   assign s_logisimBus8[6]  = s_logisimBus4[6];
+   assign s_logisimBus8[7]  = s_logisimBus4[7];
+   assign s_logisimBus8[8]  = s_logisimBus4[8];
+   assign s_logisimBus8[9]  = s_logisimBus4[9];
+
+   /*******************************************************************************
+   ** Here all input connections are defined                                     **
+   *******************************************************************************/
+   assign s_logisimBus4[31:0] = b;
+   assign s_logisimBus6[31:0] = a;
+
+   /*******************************************************************************
+   ** Here all output connections are defined                                    **
+   *******************************************************************************/
+   assign INFINITY_PIN = s_logisimNet5;
+   assign NAN_PIN      = s_logisimNet0;
+   assign res          = s_logisimBus2[31:0];
+
+   /*******************************************************************************
+   ** Here all in-lined components are defined                                   **
+   *******************************************************************************/
+
+   // NOT Gate
+   assign s_logisimBus3[31] = ~s_logisimBus4[31];
+
+   /*******************************************************************************
+   ** Here all sub-circuits are defined                                          **
+   *******************************************************************************/
+
+   fadd   v21 (.INFINITY_PIN(s_logisimNet5),
+               .NAN_PIN(s_logisimNet0),
+               .a(s_logisimBus6[31:0]),
+               .b(s_logisimBus3[31:0]),
+               .res(s_logisimBus2[31:0]));
+
+endmodule

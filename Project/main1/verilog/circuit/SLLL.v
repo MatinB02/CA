@@ -1,0 +1,215 @@
+/******************************************************************************
+ ** Logisim-evolution goes FPGA automatic generated Verilog code             **
+ ** https://github.com/logisim-evolution/                                    **
+ **                                                                          **
+ ** Component : SLLL                                                         **
+ **                                                                          **
+ *****************************************************************************/
+
+module SLLL( a,
+             b,
+             res_high,
+             res_low );
+
+   /*******************************************************************************
+   ** The inputs are defined here                                                **
+   *******************************************************************************/
+   input [31:0] a;
+   input [31:0] b;
+
+   /*******************************************************************************
+   ** The outputs are defined here                                               **
+   *******************************************************************************/
+   output [31:0] res_high;
+   output [31:0] res_low;
+
+   /*******************************************************************************
+   ** The wires are defined here                                                 **
+   *******************************************************************************/
+   wire [63:0] s_logisimBus0;
+   wire [31:0] s_logisimBus1;
+   wire [63:0] s_logisimBus10;
+   wire [63:0] s_logisimBus22;
+   wire [31:0] s_logisimBus23;
+   wire [5:0]  s_logisimBus24;
+   wire [5:0]  s_logisimBus25;
+   wire [31:0] s_logisimBus5;
+   wire [63:0] s_logisimBus6;
+   wire [5:0]  s_logisimBus7;
+   wire [63:0] s_logisimBus8;
+   wire [31:0] s_logisimBus9;
+   wire        s_logisimNet11;
+   wire        s_logisimNet12;
+   wire        s_logisimNet13;
+   wire        s_logisimNet14;
+   wire        s_logisimNet15;
+   wire        s_logisimNet16;
+   wire        s_logisimNet17;
+   wire        s_logisimNet18;
+   wire        s_logisimNet19;
+   wire        s_logisimNet2;
+   wire        s_logisimNet20;
+   wire        s_logisimNet21;
+
+   /*******************************************************************************
+   ** The module functionality is described here                                 **
+   *******************************************************************************/
+
+   /*******************************************************************************
+   ** Here all wiring is defined                                                 **
+   *******************************************************************************/
+   assign s_logisimBus24[0] = s_logisimNet16;
+   assign s_logisimBus24[1] = s_logisimNet17;
+   assign s_logisimBus24[2] = s_logisimNet18;
+   assign s_logisimBus24[3] = s_logisimNet19;
+   assign s_logisimBus24[4] = s_logisimNet20;
+   assign s_logisimBus7[0]  = s_logisimNet2;
+   assign s_logisimBus7[1]  = s_logisimNet11;
+   assign s_logisimBus7[2]  = s_logisimNet12;
+   assign s_logisimBus7[3]  = s_logisimNet13;
+   assign s_logisimBus7[4]  = s_logisimNet14;
+   assign s_logisimNet11    = s_logisimBus5[1];
+   assign s_logisimNet12    = s_logisimBus5[2];
+   assign s_logisimNet13    = s_logisimBus5[3];
+   assign s_logisimNet14    = s_logisimBus5[4];
+   assign s_logisimNet16    = s_logisimBus1[0];
+   assign s_logisimNet17    = s_logisimBus1[1];
+   assign s_logisimNet18    = s_logisimBus1[2];
+   assign s_logisimNet19    = s_logisimBus1[3];
+   assign s_logisimNet2     = s_logisimBus5[0];
+   assign s_logisimNet20    = s_logisimBus1[4];
+
+   /*******************************************************************************
+   ** Here all input connections are defined                                     **
+   *******************************************************************************/
+   assign s_logisimBus5[31:0] = b;
+   assign s_logisimBus9[31:0] = a;
+
+   /*******************************************************************************
+   ** Here all output connections are defined                                    **
+   *******************************************************************************/
+   assign res_high = s_logisimBus22[63:32];
+   assign res_low  = s_logisimBus22[31:0];
+
+   /*******************************************************************************
+   ** Here all in-lined components are defined                                   **
+   *******************************************************************************/
+
+   // Bit Extender
+   assign  s_logisimBus0[0]  =  s_logisimBus9[0];
+   assign  s_logisimBus0[1]  =  s_logisimBus9[1];
+   assign  s_logisimBus0[2]  =  s_logisimBus9[2];
+   assign  s_logisimBus0[3]  =  s_logisimBus9[3];
+   assign  s_logisimBus0[4]  =  s_logisimBus9[4];
+   assign  s_logisimBus0[5]  =  s_logisimBus9[5];
+   assign  s_logisimBus0[6]  =  s_logisimBus9[6];
+   assign  s_logisimBus0[7]  =  s_logisimBus9[7];
+   assign  s_logisimBus0[8]  =  s_logisimBus9[8];
+   assign  s_logisimBus0[9]  =  s_logisimBus9[9];
+   assign  s_logisimBus0[10]  =  s_logisimBus9[10];
+   assign  s_logisimBus0[11]  =  s_logisimBus9[11];
+   assign  s_logisimBus0[12]  =  s_logisimBus9[12];
+   assign  s_logisimBus0[13]  =  s_logisimBus9[13];
+   assign  s_logisimBus0[14]  =  s_logisimBus9[14];
+   assign  s_logisimBus0[15]  =  s_logisimBus9[15];
+   assign  s_logisimBus0[16]  =  s_logisimBus9[16];
+   assign  s_logisimBus0[17]  =  s_logisimBus9[17];
+   assign  s_logisimBus0[18]  =  s_logisimBus9[18];
+   assign  s_logisimBus0[19]  =  s_logisimBus9[19];
+   assign  s_logisimBus0[20]  =  s_logisimBus9[20];
+   assign  s_logisimBus0[21]  =  s_logisimBus9[21];
+   assign  s_logisimBus0[22]  =  s_logisimBus9[22];
+   assign  s_logisimBus0[23]  =  s_logisimBus9[23];
+   assign  s_logisimBus0[24]  =  s_logisimBus9[24];
+   assign  s_logisimBus0[25]  =  s_logisimBus9[25];
+   assign  s_logisimBus0[26]  =  s_logisimBus9[26];
+   assign  s_logisimBus0[27]  =  s_logisimBus9[27];
+   assign  s_logisimBus0[28]  =  s_logisimBus9[28];
+   assign  s_logisimBus0[29]  =  s_logisimBus9[29];
+   assign  s_logisimBus0[30]  =  s_logisimBus9[30];
+   assign  s_logisimBus0[31]  =  s_logisimBus9[31];
+   assign  s_logisimBus0[32]  =  1'b0;
+   assign  s_logisimBus0[33]  =  1'b0;
+   assign  s_logisimBus0[34]  =  1'b0;
+   assign  s_logisimBus0[35]  =  1'b0;
+   assign  s_logisimBus0[36]  =  1'b0;
+   assign  s_logisimBus0[37]  =  1'b0;
+   assign  s_logisimBus0[38]  =  1'b0;
+   assign  s_logisimBus0[39]  =  1'b0;
+   assign  s_logisimBus0[40]  =  1'b0;
+   assign  s_logisimBus0[41]  =  1'b0;
+   assign  s_logisimBus0[42]  =  1'b0;
+   assign  s_logisimBus0[43]  =  1'b0;
+   assign  s_logisimBus0[44]  =  1'b0;
+   assign  s_logisimBus0[45]  =  1'b0;
+   assign  s_logisimBus0[46]  =  1'b0;
+   assign  s_logisimBus0[47]  =  1'b0;
+   assign  s_logisimBus0[48]  =  1'b0;
+   assign  s_logisimBus0[49]  =  1'b0;
+   assign  s_logisimBus0[50]  =  1'b0;
+   assign  s_logisimBus0[51]  =  1'b0;
+   assign  s_logisimBus0[52]  =  1'b0;
+   assign  s_logisimBus0[53]  =  1'b0;
+   assign  s_logisimBus0[54]  =  1'b0;
+   assign  s_logisimBus0[55]  =  1'b0;
+   assign  s_logisimBus0[56]  =  1'b0;
+   assign  s_logisimBus0[57]  =  1'b0;
+   assign  s_logisimBus0[58]  =  1'b0;
+   assign  s_logisimBus0[59]  =  1'b0;
+   assign  s_logisimBus0[60]  =  1'b0;
+   assign  s_logisimBus0[61]  =  1'b0;
+   assign  s_logisimBus0[62]  =  1'b0;
+   assign  s_logisimBus0[63]  =  1'b0;
+
+
+   // Constant
+   assign  s_logisimBus23[31:0]  =  32'h00000001;
+
+
+   // Constant
+   assign  s_logisimBus7[5]  =  1'b0;
+
+
+   // Constant
+   assign  s_logisimBus24[5]  =  1'b0;
+
+
+   // Constant
+   assign  s_logisimBus25[5:0]  =  {2'b00, 4'h1};
+
+
+   /*******************************************************************************
+   ** Here all normal components are defined                                     **
+   *******************************************************************************/
+   Multiplexer_bus_2 #(.nrOfBits(64))
+      PLEXERS_1 (.enable(1'b1),
+                 .muxIn_0(s_logisimBus10[63:0]),
+                 .muxIn_1(s_logisimBus6[63:0]),
+                 .muxOut(s_logisimBus22[63:0]),
+                 .sel(s_logisimNet2));
+
+   Subtractor #(.extendedBits(33),
+                .nrOfBits(32))
+      ARITH_2 (.borrowIn(1'b0),
+               .borrowOut(),
+               .dataA(s_logisimBus5[31:0]),
+               .dataB(s_logisimBus23[31:0]),
+               .result(s_logisimBus1[31:0]));
+
+   Shifter_64_bit #(.shifterMode(0))
+      ARITH_3 (.dataA(s_logisimBus0[63:0]),
+               .result(s_logisimBus6[63:0]),
+               .shiftAmount(s_logisimBus7[5:0]));
+
+   Shifter_64_bit #(.shifterMode(0))
+      ARITH_4 (.dataA(s_logisimBus0[63:0]),
+               .result(s_logisimBus8[63:0]),
+               .shiftAmount(s_logisimBus24[5:0]));
+
+   Shifter_64_bit #(.shifterMode(0))
+      ARITH_5 (.dataA(s_logisimBus8[63:0]),
+               .result(s_logisimBus10[63:0]),
+               .shiftAmount(s_logisimBus25[5:0]));
+
+
+endmodule
