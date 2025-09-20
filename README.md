@@ -7,7 +7,7 @@ Computer Architecture course, instructed by Dr. Hossein Asadi, in Spring (1404)
 
 ## 📘 Project Overview
 
-This project was developed as part of the **Computer Architecture** course (Summer 1404) under the supervision of **Dr. Hossein Asadi**.
+This project was developed as part of the **Computer Architecture** course (Spring 1404) under the supervision of **Dr. Hossein Asadi**.
 The goal was to design and implement a **Floating Point Unit (FPU)** based on the **IEEE-754 single-precision** standard.
 
 The FPU includes:
