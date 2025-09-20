@@ -70,7 +70,6 @@ The implementation also handles:
 * Seyyedeh Shaqayeq Mirjalil (402106659)
 * Seyed Ahmad Mousavi Aval (402106648)
 
-Instructor: **Dr. Hossein Asadi**
 ---
 
 ## 🚀 How to Run
@@ -86,4 +85,3 @@ We basically used the validation methods previously used in practical assignment
 
 This project was created for educational purposes as part of the **Computer Architecture** course.
 
-=
